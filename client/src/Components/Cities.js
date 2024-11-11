@@ -33,9 +33,10 @@ const Cities = ({ Cities }) => {
               alignItems: "center",
               marginBottom: 1,
               padding: "10px",
-              backgroundColor: "#fafafa",
+              backgroundColor: "#73879a",
               boxShadow: "0px 3px 6px rgba(0, 0, 0, 0.05)",
               borderRadius: "8px",
+              WebkitTextFillColor: "#000000",
             }}
           >
             <Typography

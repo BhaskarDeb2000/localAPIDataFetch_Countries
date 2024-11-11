@@ -5,9 +5,6 @@ const Countries = ({ stateName, cities }) => {
   return (
     <Card sx={{ marginBottom: 2, width: "600px" }}>
       <CardContent>
-        <Typography gutterBottom sx={{ color: "text.secondary", fontSize: 14 }}>
-          Country:
-        </Typography>
         <Typography variant="h5" component="div">
           {stateName}
         </Typography>

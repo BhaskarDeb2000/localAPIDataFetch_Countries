@@ -40,72 +40,78 @@ function App() {
   );
 
   return (
-    <Container
-      maxWidth="xl"
+    <div
       style={{
-        padding: "30px",
-        backgroundColor: "#f9fafc",
-        borderRadius: "12px",
-        boxShadow: "0px 8px 16px rgba(0, 0, 0, 0.1)",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
+        backgroundColor: "#1F2933",
+        boxShadow: "0px 8px 16px rgba(0, 0, 0, 0.3)",
       }}
     >
-      <TextField
-        onChange={(prevValue) => setSearch(prevValue.target.value)}
+      <Container
+        maxWidth="xl"
         style={{
-          marginBottom: "30px",
-          width: "80%",
-          maxWidth: "600px",
-          backgroundColor: "#ffffff",
-          borderRadius: "8px",
-          boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
+          marginTop: "160px",
+          padding: "30px",
+          borderRadius: "12px",
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
         }}
-        id="filled-search"
-        label="Search..."
-        value={search}
-        type="search"
-        variant="filled"
-        InputProps={{
-          style: {
-            padding: "10px 12px",
-            fontSize: "1rem",
-          },
-        }}
-        InputLabelProps={{
-          style: {
-            color: "#999999",
-          },
-        }}
-      />
-      {error ? (
-        <Error error={error} />
-      ) : loading ? (
-        <Loading />
-      ) : (
-        filterState.map((i, countryIndex) => (
-          <div
-            style={{
-              marginBottom: "20px",
-              padding: "20px",
-              width: "100%",
-              maxWidth: "600px",
-              backgroundColor: "#f1f1f1",
-              borderRadius: "8px",
-              boxShadow: "0px 6px 12px rgba(0, 0, 0, 0.1)",
-              transition: "transform 0.3s ease",
-              ":hover": {
-                transform: "scale(1.02)",
-              },
-            }}
-            key={countryIndex}
-          >
-            <Countries stateName={i.state} cities={i.cities} />
-          </div>
-        ))
-      )}
-    </Container>
+      >
+        <TextField
+          onChange={(prevValue) => setSearch(prevValue.target.value)}
+          style={{
+            marginBottom: "30px",
+            width: "100%",
+            maxWidth: "640px",
+            backgroundColor: "#ffffff",
+            borderRadius: "8px",
+            boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
+          }}
+          id="filled-search"
+          label="Type here to search"
+          value={search}
+          type="search"
+          variant="filled"
+          InputProps={{
+            style: {
+              padding: "3px 20px",
+              fontSize: "1rem",
+            },
+          }}
+          InputLabelProps={{
+            style: {
+              color: "#888888",
+            },
+          }}
+        />
+        {error ? (
+          <Error error={error} />
+        ) : loading ? (
+          <Loading />
+        ) : (
+          filterState.map((i, countryIndex) => (
+            <div
+              style={{
+                marginBottom: "20px",
+                padding: "20px",
+                width: "100%",
+                maxWidth: "600px",
+                backgroundColor: "#f1f1f1",
+                borderRadius: "8px",
+                boxShadow: "0px 6px 12px rgba(0, 0, 0, 0.1)",
+                transition: "transform 0.3s ease",
+                ":hover": {
+                  transform: "scale(1.02)",
+                },
+              }}
+              key={countryIndex}
+            >
+              <Countries stateName={i.state} cities={i.cities} />
+            </div>
+          ))
+        )}
+      </Container>
+    </div>
   );
 }
 
