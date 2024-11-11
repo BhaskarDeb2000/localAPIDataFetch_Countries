@@ -16,7 +16,9 @@ function App() {
   useEffect(() => {
     const fetchCountry = async () => {
       try {
-        const response = await axios.get("http://localhost:5002/cities");
+        const response = await axios.get(
+          "https://local-api-data-fetch-countries-backend.vercel.app/cities"
+        );
         setCountry(response.data.country);
       } catch (error) {
         setError(error);
