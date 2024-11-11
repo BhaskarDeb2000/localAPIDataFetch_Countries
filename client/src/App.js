@@ -89,7 +89,7 @@ function App() {
         ) : loading ? (
           <Loading />
         ) : (
-          filterState.map((i, countryIndex) => (
+          filterState?.map((i, countryIndex) => (
             <div
               style={{
                 marginBottom: "20px",

@@ -24,7 +24,7 @@ const Cities = ({ Cities }) => {
           Cities:
         </Typography>
 
-        {Cities.map((cityData, index) => (
+        {Cities?.map((cityData, index) => (
           <Card
             key={index}
             sx={{
