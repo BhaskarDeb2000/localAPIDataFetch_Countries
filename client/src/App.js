@@ -1,7 +1,6 @@
-import "./App.css";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { TextField, Container } from "@mui/material";
+import { TextField, Container, Typography } from "@mui/material";
 
 import Countries from "./Components/Countries";
 import Error from "./Components/Error";
@@ -43,20 +42,24 @@ function App() {
     <div
       style={{
         backgroundColor: "#1F2933",
-        boxShadow: "0px 8px 16px rgba(0, 0, 0, 0.3)",
+        minHeight: "100vh",
+        display: "flex",
+        alignItems: "center",
       }}
     >
       <Container
-        maxWidth="xl"
         style={{
-          marginTop: "160px",
           padding: "30px",
           borderRadius: "12px",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          backgroundColor: "#1F2933",
         }}
       >
+        <Typography>
+          <h1 style={{ color: "white" }}>Welcome to the Country Page!</h1>
+        </Typography>
         <TextField
           onChange={(prevValue) => setSearch(prevValue.target.value)}
           style={{
