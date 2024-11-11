@@ -27,13 +27,15 @@ function App() {
     fetchCountry();
   }, []);
 
-  console.log({ search });
-
-  const filterData = country.filter((countryName) => {
-    return countryName.cities.some((cityName) =>
+  const filterData = country.filter((stateName) => {
+    return stateName.cities.some((cityName) =>
       cityName.city.toLowerCase().includes(search.toLowerCase())
     );
   });
+
+  const filterState = country.filter((searchState) =>
+    searchState.state.toLowerCase().includes(search.toLowerCase())
+  );
 
   return (
     <Container maxWidth="xl">
@@ -51,13 +53,9 @@ function App() {
       ) : loading ? (
         <Loading />
       ) : (
-        filterData.map((i, countryIndex) => (
-          <div style={{ marginBottom: 30 }}>
-            <Countries
-              key={countryIndex}
-              stateName={i.State}
-              cities={i.cities}
-            />
+        filterState.map((i, countryIndex) => (
+          <div style={{ marginBottom: 30 }} key={countryIndex}>
+            <Countries stateName={i.state} cities={i.cities} />
           </div>
         ))
       )}

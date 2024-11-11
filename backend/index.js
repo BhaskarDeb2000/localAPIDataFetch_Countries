@@ -10,14 +10,14 @@ app.use(cors());
 
 const countries = [
   {
-    State: "USA",
+    state: "USA",
     cities: [
       { city: "New York", population: 8419000 },
       { city: "Los Angeles", population: 3980000 },
     ],
   },
   {
-    State: "Canada",
+    state: "Canada",
     cities: [
       { city: "Toronto", population: 2730000 },
       { city: "Vancouver", population: 631000 },
