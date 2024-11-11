@@ -3,7 +3,7 @@ import { Typography, CardContent, Card } from "@mui/material";
 import Cities from "./Cities";
 const Countries = ({ stateName, cities }) => {
   return (
-    <Card sx={{ marginBottom: 2, width: "300px" }}>
+    <Card sx={{ marginBottom: 2, width: "600px" }}>
       <CardContent>
         <Typography gutterBottom sx={{ color: "text.secondary", fontSize: 14 }}>
           Country:
