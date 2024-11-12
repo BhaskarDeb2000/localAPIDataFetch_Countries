@@ -1,12 +1,12 @@
 import React from "react";
 import { Typography, CardContent, Card } from "@mui/material";
 import Cities from "./Cities";
-const Countries = ({ stateName, cities }) => {
+const Countries = ({ countryName, cities }) => {
   return (
     <Card sx={{ marginBottom: 2 }}>
       <CardContent>
         <Typography variant="h5" component="div">
-          {stateName}
+          {countryName}
         </Typography>
         <Cities Cities={cities} />
       </CardContent>

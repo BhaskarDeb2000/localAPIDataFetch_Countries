@@ -34,8 +34,8 @@ function App() {
   //  );
   //});
 
-  const filterState = country.filter((searchState) =>
-    searchState.state.toLowerCase().includes(search.toLowerCase())
+  const filterCountry = country.filter((searchCountry) =>
+    searchCountry.country.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
@@ -92,7 +92,7 @@ function App() {
         ) : loading ? (
           <Loading />
         ) : (
-          filterState?.map((i, countryIndex) => (
+          filterCountry?.map((i, countryIndex) => (
             <div
               style={{
                 marginBottom: "20px",
@@ -109,7 +109,7 @@ function App() {
               }}
               key={countryIndex}
             >
-              <Countries stateName={i.state} cities={i.cities} />
+              <Countries countryName={i.country} cities={i.cities} />
             </div>
           ))
         )}
